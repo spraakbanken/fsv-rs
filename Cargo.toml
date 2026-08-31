@@ -3,4 +3,9 @@ name = "fsv"
 version = "0.1.0"
 edition = "2024"
 
+[lib]
+name = "fsv"
+path = "src/fsv.rs"
+
 [dependencies]
+yaserde = { version = "0.12.0", features = ["derive"] }

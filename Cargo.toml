@@ -8,5 +8,6 @@ name = "fsv"
 path = "src/fsv.rs"
 
 [dependencies]
+anyhow = "1.0.104"
 reqwest = { version = "0.13.4", features = ["json"] }
 yaserde = { version = "0.12.0", features = ["derive"] }

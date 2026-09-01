@@ -1,0 +1,19 @@
+[package]
+name = "karp-api-client"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+
+[lib]
+name = "karp_api_client"
+path = "src/karp_api_client.rs"
+
+[dependencies]
+anyhow.workspace = true
+chrono = { workspace = true, features = ["serde"] }
+format_serde_error = { workspace = true, default-features = false, features = ["serde_json", "unicode-segmentation"] }
+reqwest = { workspace = true, features = ["json"] }
+serde = { workspace = true, features = ["derive"] }
+serde_json.workspace = true
+tracing.workspace = true
+ulid = { workspace = true, features = ["serde"] }

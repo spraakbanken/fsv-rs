@@ -1,0 +1,14 @@
+[package]
+name = "fsv"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+
+[lib]
+name = "fsv"
+path = "src/fsv.rs"
+
+[dependencies]
+karp-api-client.workspace = true
+tokio = { workspace = true, default-features = false, features = ["macros", "rt-multi-thread"] }
+yaserde = { workspace = true, features = ["derive"] }

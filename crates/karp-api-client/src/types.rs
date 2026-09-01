@@ -17,7 +17,7 @@ pub struct SearchQueryHit {
     // hits: Vec<SearchQueryHit>
     entry: serde_json::Value,
     last_modified_by: String,
-    #[serde(deserialize_with = "crate::karp_api_client::types::from_timestamp")]
+    #[serde(deserialize_with = "from_timestamp")]
     last_modified: DateTime<Utc>,
     version: u64,
 }

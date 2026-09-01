@@ -1,20 +1,24 @@
-[package]
-name = "fsv"
+[workspace]
+resolver = "3"
+members = ["crates/fsv", "crates/karp-api-client/"]
+
+[workspace.package]
 version = "0.1.0"
 edition = "2024"
+rust-version = "1.85.0"
 
-[lib]
-name = "fsv"
-path = "src/fsv.rs"
+[workspace.dependencies]
+# local crates
+karp-api-client = { path = "crates/karp-api-client/" }
 
-[dependencies]
+# external crates
 anyhow = "1.0.104"
 chrono = { version = "0.4.45", features = ["serde"] }
-format_serde_error = { version = "0.3.0", default-features = false, features = ["serde_json", "unicode-segmentation"] }
+format_serde_error = { version = "0.3.0", default-features = false }
 reqwest = { version = "0.13.4", features = ["json"] }
-serde = { version = "1.0.229", features = ["derive"] }
+serde = { version = "1.0.229" }
 serde_json = "1.0.151"
-tokio = { version = "1.53.1", default-features = false, features = ["macros", "rt-multi-thread"] }
+tokio = { version = "1.53.1", default-features = false }
 tracing = { version = "0.1.44", features = ["log"] }
 ulid = { version = "3.0.0", features = ["serde"] }
-yaserde = { version = "0.12.0", features = ["derive"] }
+yaserde = { version = "0.12.0" }

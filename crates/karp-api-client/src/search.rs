@@ -1,6 +1,6 @@
-use crate::karp_api_client::KarpRedApiClient;
-use crate::karp_api_client::errors;
-use crate::karp_api_client::types;
+use crate::KarpRedApiClient;
+use crate::errors;
+use crate::types;
 
 #[derive(Clone, Debug)]
 pub struct Search {

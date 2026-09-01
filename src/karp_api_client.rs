@@ -8,6 +8,12 @@ pub struct KarpRedApiClient {
     client: reqwest::Client,
 }
 
+impl Default for KarpRedApiClient {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 const KARP_RED_API_URL: &str = "https://spraakbanken4.it.gu.se/karp/v7";
 
 impl KarpRedApiClient {

@@ -14,7 +14,7 @@ impl Search {
 
     #[tracing::instrument]
     pub async fn query(&self, resources: &str) -> Result<types::SearchQuery, errors::Error> {
-        let mut req = self.client.client.request(
+        let req = self.client.client.request(
             reqwest::Method::GET,
             format!("{}/query/{}", self.client.base_url, resources),
         );
